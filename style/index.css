@@ -106,6 +106,7 @@ p{
 
 /* Top section styles */
 #top img{
+    margin-left: .8%;
     object-fit: cover;
     object-position: 50% 0;
     height: 600px;
@@ -119,6 +120,7 @@ p{
 }
 #projects img{
     margin-top:1%;
+    margin-left: .8%;
     margin-bottom: 1.5%;
     object-position: 50% 0;
     height: 480px;
@@ -135,10 +137,11 @@ p{
 }
 
 /* Footer styles */
-.footer{
-    border:100px red;
+footer{
+    background-color: rgb(0, 0, 199);
+    padding: 2.5%;
 }
-.footerbutton{
+.footerbuttons{
     text-align: center;
     font-size: 3rem;
 }
@@ -147,6 +150,7 @@ button{
     font-size: 3rem;
 }
 button:hover{
-        font-size: 3.5rem;
-        background-color: white;
+    color: blue;
+    font-size: 3.5rem;
+    background-color: white;
 }
