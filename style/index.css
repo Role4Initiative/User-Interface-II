@@ -61,7 +61,7 @@ html{
 body{
     font-size:1.6rem;
     line-height:1.5;
-    background-color: #FBFFFB;
+    background-color: whitesmoke;
     color:#4f4f4f; 
 }
 h1{
@@ -74,28 +74,7 @@ p{
 }
 
 /*Helper classes*/
-.bgimg{
-    background-size:cover;
-    background-repeat: no-repeat;
-}
-.links{
-}
 
-/* Header styles */
-nav{
-    display: flex;
-    justify-content: center;
-    color: #4f4f4f;
-}
-nav a{
-    text-align: center;
-    font-size: 3rem;
-}
-nav a:hover{
-    font-size: 3.5rem;
-    color: darkblue;
-    background-color: white;
-}
 a{
     text-decoration: none;
     color: #4f4f4f;
@@ -108,6 +87,26 @@ p{
     padding-bottom: 2.8%;
     text-align: center;
 }
+.bgimg{
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Header styles */
+nav{
+    text-decoration: none;
+    background-color: darkblue;
+    padding: .8%;
+    color: #4f4f4f;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    padding: .5%;
+}
+
 
 /* Top section styles */
 #top img{
@@ -120,14 +119,13 @@ p{
 /* Project section styles */
 #projects{
     padding-right: .8%;
-    padding-left: .5%;
     padding-bottom: .5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 #projects img{
-    padding: .25%;
+    padding-right: .5%;
     object-fit: cover;
     object-position: 50% 0;
     height: auto;
@@ -144,31 +142,69 @@ p{
 
 /* Footer styles */
 footer{
-    background-color: rgb(0, 0, 199);
+    background-color: darkblue;
     padding: 2.5%;
 }
 .footerbuttons{
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
     font-size: 3rem;
 }
 button{
     text-decoration: none;
     background-color: white;
-    color: black;
+    color: #4f4f4f;
     padding: .5%;
-    border: 2px solid black;
+    border: 5px solid black;
     border-radius: 999px;
     font-size: 3rem;
 }
 button:hover{
-    background-color: lightgrey;
+    background-color: lightseagreen;
     color: blue;
     padding: 1%;
     border-radius: 0;
     font-size: 3.5rem;
 }
-button .footerbutton{
-    text-decoration: none;
-    color: inherit;
+
+/*Media Queries go here*/
+/*
+desktop first design - means we scale down - we use max-width
+mobile first design - means we scale up - we use min-width
+*/
+/*tablet view - 800px*/
+/*when the screen size reaches 800px or smaller these rules apply*/
+@media (max-width: 800px){
+    *{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    #top img{
+        
+    }
+    .one, .two, .three, .four{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+        max-width: 100%;
+    }
+    .five{
+
+    }
+    .links{
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+    }
+}
+
+/*when the screen size reaches 500px or smaller these rules apply*/
+/*mobile view 500px*/
+@media (max-width: 500px){
+    *{
+        font-size: 2rem;
+    }
+    .footerbuttons{
+        flex-direction: column-reverse;
+    }
 }
