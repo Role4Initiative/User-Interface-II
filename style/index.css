@@ -52,6 +52,12 @@ table {
 html{
     font-size:62.5%;
 }
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
 body{
     font-size:1.6rem;
     line-height:1.5;
@@ -105,31 +111,30 @@ p{
 
 /* Top section styles */
 #top img{
-    margin-left: .8%;
     object-fit: cover;
     object-position: 50% 0;
-    height: 60%;
+    height: auto;
     width: 100%;
     overflow: hidden;
 }
 /* Project section styles */
 #projects{
+    padding-right: .8%;
+    padding-left: .5%;
+    padding-bottom: .5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 #projects img{
-    /* justify-content: space-evenly; */
-    margin-top:1%;
-    margin-left: .8%;
-    margin-bottom: 1.5%;
+    padding: .25%;
+    object-fit: cover;
     object-position: 50% 0;
-    height: 480px;
-    width: 250px;
+    height: auto;
+    width: 100%;
     overflow: hidden;
 }
 #projects p{
-    width: 250px;
     display: flex;
     align-self: center;
     text-align: center;
@@ -144,23 +149,26 @@ footer{
 }
 .footerbuttons{
     text-align: center;
+    flex-direction: column;
     font-size: 3rem;
 }
 button{
     text-decoration: none;
     background-color: white;
-    color: blue;
+    color: black;
+    padding: .5%;
     border: 2px solid black;
     border-radius: 999px;
     font-size: 3rem;
 }
 button:hover{
     background-color: lightgrey;
-    color: black;
+    color: blue;
+    padding: 1%;
     border-radius: 0;
     font-size: 3.5rem;
 }
-button a{
+button .footerbutton{
     text-decoration: none;
     color: inherit;
 }
