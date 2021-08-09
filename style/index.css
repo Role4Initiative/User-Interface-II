@@ -82,7 +82,6 @@ nav{
     color: #4f4f4f;
 }
 nav a{
-    border-radius: 50px;
     text-align: center;
     font-size: 3rem;
 }
@@ -109,16 +108,18 @@ p{
     margin-left: .8%;
     object-fit: cover;
     object-position: 50% 0;
-    height: 600px;
-    width: 100vw;
+    height: 60%;
+    width: 100%;
     overflow: hidden;
 }
 /* Project section styles */
 #projects{
     display: flex;
-    display: row;
+    flex-direction: row;
+    justify-content: space-between;
 }
 #projects img{
+    /* justify-content: space-evenly; */
     margin-top:1%;
     margin-left: .8%;
     margin-bottom: 1.5%;
@@ -128,7 +129,7 @@ p{
     overflow: hidden;
 }
 #projects p{
-    margin-left: 20%;
+    width: 250px;
     display: flex;
     align-self: center;
     text-align: center;
@@ -146,11 +147,20 @@ footer{
     font-size: 3rem;
 }
 button{
-    background-color: lightgrey;
+    text-decoration: none;
+    background-color: white;
+    color: blue;
+    border: 2px solid black;
+    border-radius: 999px;
     font-size: 3rem;
 }
 button:hover{
-    color: blue;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 0;
     font-size: 3.5rem;
-    background-color: white;
+}
+button a{
+    text-decoration: none;
+    color: inherit;
 }
