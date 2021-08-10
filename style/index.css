@@ -122,14 +122,14 @@ nav{
     padding-bottom: .5%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
 }
 #projects img{
-    padding-right: .5%;
+    padding: .5%;
     object-fit: cover;
     object-position: 50% 0;
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
     overflow: hidden;
 }
 #projects p{
@@ -138,6 +138,9 @@ nav{
     text-align: center;
     font-size: 2rem;
     color: black;
+}
+.five{
+    text-align: center;
 }
 
 /* Footer styles */
@@ -179,22 +182,51 @@ mobile first design - means we scale up - we use min-width
         text-align: center;
         font-size: 2.5rem;
     }
-    #top img{
-        
-    }
-    .one, .two, .three, .four{
+    #projects{
         display: flex;
-        justify-content: space-between;
-        flex-flow: wrap;
-        max-width: 100%;
+        flex-wrap: wrap;
+        align-items: stretch;
+        padding: 2%;
+    }
+    .one{
+        order:1;
+        object-fit: cover;
+        height: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    .two{
+        order:1;
+        object-fit: cover;
+        height: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    .three{
+        order:2;
+        object-fit: cover;
+        height: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    .four{
+        order:2;
+        object-fit: cover;
+        height: auto;
+        width: 50%;
+        overflow: hidden;
     }
     .five{
-
+        order:3;
+        align-content: center;
     }
     .links{
         display: flex;
         justify-content: center;
         flex-flow: column;
+    }
+    .footerbuttons{
+        flex-direction: column;
     }
 }
 
