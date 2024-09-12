@@ -1,1 +1,242 @@
-/* Add CSS styling here */
+/* Reset code start */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Reset code end */
+
+/* General styles */
+html{
+    font-size:62.5%;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+body{
+    font-size:1.6rem;
+    line-height:1.5;
+    background-color: whitesmoke;
+    color:#4f4f4f; 
+}
+h1{
+    font-size:5rem;
+    color: #4f4f4f;
+}
+p{
+    font-size: 2rem;
+    color: black;
+}
+
+/*Helper classes*/
+
+a{
+    text-decoration: none;
+    color: #4f4f4f;
+}
+h1{
+    padding: 2.5%;
+    text-align: center;
+}
+p{
+    padding-bottom: 2.8%;
+    text-align: center;
+}
+.bgimg{
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Header styles */
+nav{
+    text-decoration: none;
+    background-color: darkblue;
+    padding: .8%;
+    color: #4f4f4f;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    padding: .5%;
+}
+
+
+/* Top section styles */
+#top img{
+    object-fit: cover;
+    object-position: 50% 0;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+/* Project section styles */
+#projects{
+    padding-right: .8%;
+    padding-bottom: .5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#projects img{
+    padding: .5%;
+    object-fit: cover;
+    object-position: 50% 0;
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+}
+#projects p{
+    display: flex;
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+}
+.five{
+    text-align: center;
+}
+
+/* Footer styles */
+footer{
+    background-color: darkblue;
+    padding: 2.5%;
+}
+.footerbuttons{
+    text-align: center;
+    flex-direction: row;
+    font-size: 3rem;
+}
+button{
+    text-decoration: none;
+    background-color: white;
+    color: #4f4f4f;
+    padding: .5%;
+    border: 5px solid black;
+    border-radius: 999px;
+    font-size: 3rem;
+}
+button:hover{
+    background-color: lightseagreen;
+    color: blue;
+    padding: 1%;
+    border-radius: 0;
+    font-size: 3.5rem;
+}
+
+/*Media Queries go here*/
+/*
+desktop first design - means we scale down - we use max-width
+mobile first design - means we scale up - we use min-width
+*/
+/*tablet view - 800px*/
+/*when the screen size reaches 800px or smaller these rules apply*/
+@media (max-width: 800px){
+    *{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    #projects{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        padding: 2%;
+    }
+    .one{
+        order:1;
+        object-fit: cover;
+        height: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    .two{
+        order:1;
+        object-fit: cover;
+        height: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    .three{
+        order:2;
+        object-fit: cover;
+        height: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    .four{
+        order:2;
+        object-fit: cover;
+        height: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    .five{
+        order:3;
+        align-content: center;
+    }
+    .links{
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+    }
+    .footerbuttons{
+        flex-direction: column;
+    }
+}
+
+/*when the screen size reaches 500px or smaller these rules apply*/
+/*mobile view 500px*/
+@media (max-width: 500px){
+    *{
+        font-size: 2rem;
+    }
+    .footerbuttons{
+        flex-direction: column-reverse;
+    }
+}
